@@ -1,8 +1,11 @@
 #!/bin/python3
 
-import sys
-newVer= sys.argv[1]
-oldVer= "1.0.6"
+import yaml
+newVer= "0.0.0"
+with open("./version.yaml", "r") as buffer:
+    newVer= buffer.read()
+newVer= yaml.safe_load(newVer)["version"]
+oldVer= "1.0.0"
 
 if not oldVer.count(".") == 2 and not len(oldVer) == 5:
     exit(1)
@@ -23,3 +26,5 @@ replace("./debian/control")
 replace("./debian/changelog")
 replace("./CMakeLists.txt")
 replace("./versionBump.py")
+replace("./cobol/app.cbl")
+replace("./lua/processor.lua")
