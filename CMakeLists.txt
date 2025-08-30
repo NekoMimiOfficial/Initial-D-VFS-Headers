@@ -12,14 +12,14 @@ set (CMAKE_RUNTIME_OUTPUT_DIRECTORY "${FullOutputDir}")
 include_directories(header)
 include_directories(source)
 
-add_library(NMPP SHARED
+add_library(IDSSVfs SHARED
   ./source/assembly.S
   ./source/hashtools.cpp
   ./source/extractANA.cpp
   ./source/extractXBB.cpp
 )
 
-set_target_properties(NMPP PROPERTIES
+set_target_properties(IDSSVfs PROPERTIES
   VERSION ${PROJECT_VERSION}
   SOVERSION ${PROJECT_VERSION_MAJOR}
   PUBLIC_HEADER ./headers/XBB.hpp

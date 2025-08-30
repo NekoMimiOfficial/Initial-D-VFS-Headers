@@ -13,6 +13,9 @@ Extractor::Extractor(std::string fn)
 XBB Extractor::extract()
 {
   File file(filename);
+  if (!file.safe())
+  {XBB invalid; invalid.valid= false; return invalid;}
+
   byteReader reader(file.get_vector());
 
   // Read the file type (3 bytes)
