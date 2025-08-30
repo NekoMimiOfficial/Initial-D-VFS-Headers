@@ -3,9 +3,10 @@
 
 #include <cstddef>
 #include <cstdint>
+#include <string>
 #include <vector>
 
-struct XBB
+struct XBBitem
 {
   uint32_t ptr_start;
   uint32_t ptr_size;
@@ -14,7 +15,17 @@ struct XBB
 
   size_t index;
 
+  std::string filename;
   std::vector<uint8_t> data;
+};
+
+struct XBB
+{
+  uint8_t flag_4;
+  size_t file_count;
+  bool valid= true;
+
+  std::vector<XBBitem> items;
 };
 
 #endif // !__IDSS_XBB
