@@ -1,0 +1,9 @@
+Package: libIDSSVfs
+Version: 1.0.0
+Architecture: amd64
+Installed-Size: 40
+Maintainer: NekoMimiOfficial <nekomimi@tilde.team>
+Section: devel
+Priority: optional
+Homepage: http://nekomimi.tilde.team
+Description: C++ headers for the Initial D street stage vfs file extraction
