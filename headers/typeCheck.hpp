@@ -1,10 +1,10 @@
-#ifdef __IDSS_TYPECHECK
+#ifndef __IDSS_TYPECHECK
 #define __IDSS_TYPECHECK
 
 #include <string>
 
 enum VFSType {
-  XBB,
+  XBB= 0,
   ANA,
   ERR
 };
