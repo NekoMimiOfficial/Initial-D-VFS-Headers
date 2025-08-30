@@ -14,6 +14,7 @@ Make sure you have the following prerequisits:
 - gnucobol  
 - python3  
 - lua  
+- jdk  
 
 You can now run `./build.sh` and find the deb package at `./build/`  
 
