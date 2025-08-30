@@ -13,7 +13,7 @@ include_directories(header)
 include_directories(source)
 
 add_library(NMPP SHARED
-  ./source/xor.S
+  ./source/assembly.S
   ./source/hashtools.cpp
   ./source/extractANA.cpp
   ./source/extractXBB.cpp
