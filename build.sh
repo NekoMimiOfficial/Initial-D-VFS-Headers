@@ -18,7 +18,7 @@ rm -rf ./build/libIDSSVfs_${VERSION}_amd64/usr/lib/x86_64-linux-gnu/*
 cp -r ./debian/* ./build/libIDSSVfs_${VERSION}_amd64/DEBIAN/
 cmake -L .
 make -j4
-cobc -x ./cobol/app.cbl -o ./build/libIDSSVfs_${VERSION}
+cobc -x ./cobol/app.cbl -o ./build/libIDSSVfs_${VERSION}_amd64/usr/bin/idss-vfs
 lua ./lua/processor.lua
 cp -r -d ./objects/libIDSSVfs.so* ./build/libIDSSVfs_${VERSION}_amd64/usr/lib/x86_64-linux-gnu/
 cp -r -d ./headers/* ./build/libIDSSVfs_${VERSION}_amd64/usr/include/IDSSVfs/
