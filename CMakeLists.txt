@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5.0)
-project(IDSS-VFS-headers VERSION 1.0.6)
+project(IDSS-VFS-headers VERSION 1.0.6 LANGUAGES C CXX ASM)
 
 set (CMAKE_CXX_STANDARD_REQUIRED 20)
 set (CMAKE_CXX_STANDARD 20)
@@ -13,6 +13,7 @@ include_directories(header)
 include_directories(source)
 
 add_library(NMPP SHARED
+  ./source/xor.S
   ./source/hashtools.cpp
   ./source/extractANA.cpp
   ./source/extractXBB.cpp
