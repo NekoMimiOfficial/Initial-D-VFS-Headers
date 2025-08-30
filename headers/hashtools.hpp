@@ -9,6 +9,7 @@ extern "C"
   double sqrt_fast(double a);
   uint32_t asm_crc(uint32_t polynomial, uint32_t initial, const char* data);
   void asm_sha256(uint32_t* output_hash, const uint8_t* data_block);
+  void asm_aes(uint8_t* output_data, const uint8_t* input_data, const uint8_t* key_data);
 }
 
 #endif // !__IDSS_HASHTOOLS
