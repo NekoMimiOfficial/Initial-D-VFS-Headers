@@ -1,7 +1,7 @@
-Package: libIDSSVfs
+Package: libidssvfs
 Version: 1.0.0
 Architecture: amd64
-Installed-Size: 40
+Installed-Size: 90
 Maintainer: NekoMimiOfficial <nekomimi@tilde.team>
 Section: devel
 Priority: optional

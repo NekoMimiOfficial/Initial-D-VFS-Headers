@@ -4,13 +4,13 @@
 #include "ANA.hpp"
 #include <string>
 
-class Extractor
+class ANAExtractor
 {
   private:
     std::string filename;
 
   public:
-    Extractor(std::string fn);
+    ANAExtractor(std::string fn);
     ANA extract();
 };
 

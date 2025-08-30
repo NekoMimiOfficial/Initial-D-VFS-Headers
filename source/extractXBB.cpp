@@ -7,10 +7,10 @@
 #include <NMPP/Converters.hpp>
 #include <vector>
 
-Extractor::Extractor(std::string fn)
+XBBExtractor::XBBExtractor(std::string fn)
 {filename= fn;}
 
-XBB Extractor::extract()
+XBB XBBExtractor::extract()
 {
   File file(filename);
   if (!file.safe())

@@ -6,10 +6,10 @@
 #include <cstdint>
 #include <vector>
 
-Extractor::Extractor(std::string fn)
+ANAExtractor::ANAExtractor(std::string fn)
 {filename= fn;}
 
-ANA Extractor::extract()
+ANA ANAExtractor::extract()
 {
   File file(filename);
   if (!file.safe())

@@ -4,13 +4,13 @@
 #include "XBB.hpp"
 #include <string>
 
-class Extractor
+class XBBExtractor
 {
   private:
     std::string filename;
 
   public:
-    Extractor(std::string fn);
+    XBBExtractor(std::string fn);
     XBB extract();
 };
 
