@@ -23,7 +23,7 @@
            ACCEPT WS-ARGUMENT FROM COMMAND-LINE.
            
            IF FUNCTION TRIM(WS-ARGUMENT) = "--version" THEN
-               DISPLAY "v1.0.0"
+               DISPLAY "v1.0.1"
            ELSE IF FUNCTION TRIM(WS-ARGUMENT) = "--docs" THEN
                PERFORM 200-PRINT-DOCS
            ELSE
