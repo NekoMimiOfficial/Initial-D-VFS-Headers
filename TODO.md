@@ -17,3 +17,5 @@ Priority: 0-3
 | - [ ] 0% | `source/converter.cpp::png2gim` | 1 | - | - |
 | - [ ] 0% | `headers/converter.hpp::gim2png` | 1 | - | - |
 | - [ ] 0% | `source/converter.cpp::gim2png` | 1 | - | - |
+| - [ ] 0% | `cobol/app.cbl::targetLib` | 2 | - | - |
+| - [ ] 0% | `cobol/app.cbl::cflags` | 2 | - | - |
