@@ -8,6 +8,8 @@ mkdir -p ./build/libIDSSVfs_${VERSION}_amd64/
 mkdir -p ./build/libIDSSVfs_${VERSION}_amd64/DEBIAN/
 mkdir -p ./build/libIDSSVfs_${VERSION}_amd64/usr/
 mkdir -p ./build/libIDSSVfs_${VERSION}_amd64/usr/bin/
+mkdir -p ./build/libIDSSVfs_${VERSION}_amd64/usr/share/
+mkdir -p ./build/libIDSSVfs_${VERSION}_amd64/usr/share/idss/
 mkdir -p ./build/libIDSSVfs_${VERSION}_amd64/usr/include/
 mkdir -p ./build/libIDSSVfs_${VERSION}_amd64/usr/include/IDSSVfs/
 mkdir -p ./build/libIDSSVfs_${VERSION}_amd64/usr/lib/
@@ -32,6 +34,7 @@ cp -r -d ./objects/libIDSSVfs.so* ./build/libIDSSVfs_${VERSION}_amd64/usr/lib/x8
 cp -r -d ./headers/* ./build/libIDSSVfs_${VERSION}_amd64/usr/include/IDSSVfs/
 mkdir -p ./build/lib/src/
 mkdir -p ./build/lib/header/
+cp ./doc.txt ./build/libIDSSVfs_${VERSION}_amd64/usr/share/idss/
 cp -r -d ./objects/libIDSSVfs.so* ./build/lib/src/
 cp -r -d ./headers/* ./build/lib/header/
 
