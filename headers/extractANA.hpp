@@ -11,7 +11,7 @@ class ANAExtractor
 
   public:
     ANAExtractor(std::string fn);
-    ANA extract();
+    struct ANA extract();
 };
 
 #endif // !__IDSS_ANA_EXT

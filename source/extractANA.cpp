@@ -1,6 +1,7 @@
 #include "../headers/extractANA.hpp"
 #include <NMPP/BinaryReader.hpp>
 #include <NMPP/Converters.hpp>
+#include <NMPP/outTools.hpp>
 #include <NMPP/FileIO.hpp>
 #include <cstddef>
 #include <cstdint>
@@ -9,17 +10,17 @@
 ANAExtractor::ANAExtractor(std::string fn)
 {filename= fn;}
 
-ANA ANAExtractor::extract()
+struct ANA ANAExtractor::extract()
 {
   File file(filename);
   if (!file.safe())
-  {ANA invalid; invalid.valid= false; return invalid;}
+  {ANA invalid; invalid.file_count= 65;invalid.valid= false; writer::error("ANAExtractor::extract", "The file provided is unsafe.");return invalid;}
 
   byteReader reader(file.get_vector());
 
   // Read the file type (4 bytes)
   if (!(reader.read() == 0x40 && reader.read() == 0x41 && reader.read() == 0x4E && reader.read() == 0x41))
-  {ANA invalid; invalid.valid= false; return invalid;}
+  {ANA invalid; invalid.file_count= 66;invalid.valid= false; writer::error("ANAExtractor::extract", "Not an ANA file.");return invalid;}
 
   // Initialize ANA object
   ANA ana;
@@ -76,7 +77,7 @@ ANA ANAExtractor::extract()
     uint32_t toRead= ana.items[index_current].ptr_size;
 
     // Start reading data
-    reader.set(ana.items[index_current].ptr_size);
+    reader.set(ana.items[index_current].ptr_start);
     while (1)
     {
       if (toRead <= 0) {break;}

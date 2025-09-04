@@ -4,7 +4,7 @@ Architecture: amd64
 Installed-Size: 208
 Maintainer: NekoMimiOfficial <nekomimi@tilde.team>
 Section: devel
-Depends: libnmpp
+Depends: libnmpp-dev
 Priority: optional
 Homepage: http://nekomimi.tilde.team
 Description: C++ headers for the Initial D street stage vfs file extraction

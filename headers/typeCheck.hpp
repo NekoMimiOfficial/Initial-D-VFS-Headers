@@ -5,8 +5,8 @@
 
 enum VFSType {
   XBB= 0,
-  ANA,
-  ERR
+  ANA= 1,
+  ERR= 3
 };
 
 VFSType checkVFS(std::string filename);

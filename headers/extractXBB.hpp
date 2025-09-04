@@ -11,7 +11,7 @@ class XBBExtractor
 
   public:
     XBBExtractor(std::string fn);
-    XBB extract();
+    struct XBB extract();
 };
 
 #endif // !__IDSS_XBB_EXT

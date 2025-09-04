@@ -1,26 +1,27 @@
 #include "../headers/extractXBB.hpp"
+#include <NMPP/BinaryReader.hpp>
+#include <NMPP/Converters.hpp>
+#include <NMPP/outTools.hpp>
+#include <NMPP/FileIO.hpp>
+#include <vector>
+#include <string>
 #include <cstddef>
 #include <cstdint>
-#include <string>
-#include <NMPP/BinaryReader.hpp>
-#include <NMPP/FileIO.hpp>
-#include <NMPP/Converters.hpp>
-#include <vector>
 
 XBBExtractor::XBBExtractor(std::string fn)
 {filename= fn;}
 
-XBB XBBExtractor::extract()
+struct XBB XBBExtractor::extract()
 {
   File file(filename);
   if (!file.safe())
-  {XBB invalid; invalid.valid= false; return invalid;}
+  {XBB invalid; invalid.file_count= 65;invalid.valid= false; writer::error("XBBExtractor::extract", "The file provided is unsafe.");return invalid;}
 
   byteReader reader(file.get_vector());
 
   // Read the file type (3 bytes)
   if (!(reader.read() == 0x58 && reader.read() == 0x42 && reader.read() == 0x42))
-  {XBB invalid; invalid.valid= false; return invalid;}
+  {XBB invalid; invalid.file_count= 66;invalid.valid= false; writer::error("XBBExtractor::extract", "Not an XBB file.");return invalid;}
 
   // Read the Flag 4 and initialize XBB struct
   XBB xbb;
@@ -101,7 +102,7 @@ XBB XBBExtractor::extract()
     uint32_t toRead= xbb.items[index_current].ptr_size;
 
     // Start reading data
-    reader.set(xbb.items[index_current].ptr_size);
+    reader.set(xbb.items[index_current].ptr_start);
     while (1)
     {
       if (toRead <= 0) {break;}
