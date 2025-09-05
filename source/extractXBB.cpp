@@ -77,7 +77,7 @@ struct XBB XBBExtractor::extract()
     while (1)
     {
       uint8_t readByte= reader.read();
-      if (readByte == 0x0) {break;}
+      if (readByte == 0x0) {bufferFileName.push_back(readByte); break;}
       bufferFileName.push_back(readByte);
     }
 

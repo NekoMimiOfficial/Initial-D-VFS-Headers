@@ -51,7 +51,7 @@ struct ANA ANAExtractor::extract()
     {
       // Continue reading until you hit a nullptr
       uint8_t byteRead= reader.read();
-      if (byteRead == 0x0) {break;}
+      if (byteRead == 0x0) {bufferFileName.push_back(byteRead); break;}
       bufferFileName.push_back(byteRead);
 
       // creating the word
