@@ -1,6 +1,6 @@
 local file = io.open("version.yaml", "w")
 if file then
-    file:write("version: \"1.0.1\"")
+    file:write("version: \"1.0.2\"")
     file:close()
     
     print("Successfully created 'version.yaml'")
