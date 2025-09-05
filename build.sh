@@ -18,6 +18,7 @@ mkdir -p ./build/libIDSSVfs_${VERSION}_amd64/usr/lib/x86_64-linux-gnu/
 rm -rf ./build/lib/*
 rm -rf ./build/libIDSSVfs_${VERSION}_amd64/usr/include/IDSSVfs/*
 rm -rf ./build/libIDSSVfs_${VERSION}_amd64/usr/lib/x86_64-linux-gnu/*
+rm -rf ./objects/*
 
 cp -r ./debian/* ./build/libIDSSVfs_${VERSION}_amd64/DEBIAN/
 cmake -L .
