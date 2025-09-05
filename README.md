@@ -5,8 +5,11 @@ You can't and shouldn't use this library locally (even so you're free to do) unl
 
 # Installation  
 This project only works on debian based distros, install it by adding the custom repo below and installing the package `libidssvfs`  
-```
-please actually create the repo... watashi :'3'
+```sh
+wget -O- https://nekomimi.tilde.team/nekomimiofficial.gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/nekomimiofficial-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/nekomimiofficial-archive-keyring.gpg] https://nekomimi.tilde.team/ stable main" | sudo tee /etc/apt/sources.list.d/nekomimiofficial.list
+sudo apt update
+sudo apt install libidssvfs
 ```
 
 # Building  
