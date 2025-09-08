@@ -54,6 +54,6 @@
                END-READ
            END-PERFORM
            DISPLAY " "
-           DISPLAY "Sponsored by the nerds and cute catgirrrrs :3"
+           DISPLAY "Sponsored by the nerdz and cute catgirrrrs :3"
 
            CLOSE InputFile.

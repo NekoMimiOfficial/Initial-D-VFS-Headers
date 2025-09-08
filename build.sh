@@ -31,12 +31,12 @@ jar -cfe ./Installer.jar Installer ./Installer.class
 cd ..
 chmod +x ./build/Installer.jar
 chmod +x ./build/Installer.class
-cp -r -d ./objects/libidssvfs.so* ./build/libIDSSVfs_${VERSION}_amd64/usr/lib/x86_64-linux-gnu/
+cp -r -d ./objects/libIDSSVfs.so* ./build/libidssvfs_${VERSION}_amd64/usr/lib/x86_64-linux-gnu/
 cp -r -d ./headers/* ./build/libidssvfs_${VERSION}_amd64/usr/include/IDSSVfs/
 mkdir -p ./build/lib/src/
 mkdir -p ./build/lib/header/
 cp ./doc.txt ./build/libidssvfs_${VERSION}_amd64/usr/share/idss/
-cp -r -d ./objects/libidssvfs.so* ./build/lib/src/
+cp -r -d ./objects/libIDSSVfs.so* ./build/lib/src/
 cp -r -d ./headers/* ./build/lib/header/
 
 dpkg-deb --build ./build/libidssvfs_${VERSION}_amd64

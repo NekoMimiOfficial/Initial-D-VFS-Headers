@@ -30,3 +30,8 @@ set_target_properties(IDSSVfs PROPERTIES
   PUBLIC_HEADER ./headers/extractANA.hpp
   PUBLIC_HEADER ./headers/extractXBB.hpp
 )
+
+install(TARGETS IDSSVfs
+  LIBRARY DESTINATION lib
+  PUBLIC_HEADER DESTINATION include/${PROJECT_NAME}
+)
